@@ -1,0 +1,68 @@
+numero = int(input("Digite um número de 4 dígitos: "))
+
+# Validações
+if numero < 0:
+    print("Erro: número deve ser positivo")
+    exit()
+
+if numero > 9999:
+    print("Erro: número inválido (mais de 4 dígitos)")
+    exit()
+
+# separar dígitos para validar repetição
+d1 = numero // 1000
+d2 = (numero % 1000) // 100
+d3 = (numero % 100) // 10
+d4 = numero % 10
+
+contador_iguais = 0
+
+if d1 == d2 or d1 == d3 or d1 == d4:
+    contador_iguais += 1
+if d2 == d3 or d2 == d4:
+    contador_iguais += 1
+if d3 == d4:
+    contador_iguais += 1
+
+if contador_iguais >= 3:
+    print("Erro: muitos dígitos repetidos")
+    exit()
+
+# Loop principal
+contador = 0
+
+while numero != 6174:
+    contador = contador + 1
+
+    # separar dígitos
+    d1 = numero // 1000
+    d2 = (numero % 1000) // 100
+    d3 = (numero % 100) // 10
+    d4 = numero % 10
+
+    # ordenar (crescente)
+    if d1 > d2:
+        aux = d1; d1 = d2; d2 = aux
+    if d1 > d3:
+        aux = d1; d1 = d3; d3 = aux
+    if d1 > d4:
+        aux = d1; d1 = d4; d4 = aux
+    if d2 > d3:
+        aux = d2; d2 = d3; d3 = aux
+    if d2 > d4:
+        aux = d2; d2 = d4; d4 = aux
+    if d3 > d4:
+        aux = d3; d3 = d4; d4 = aux
+
+    # montar números
+    NDC = d1*1000 + d2*100 + d3*10 + d4
+    NDD = d4*1000 + d3*100 + d2*10 + d1
+
+    resultado = NDD - NDC
+
+    print("Iteração", contador, ":", NDD, "-", NDC, "=", resultado)
+
+    numero = resultado
+
+# Final
+print("\nConstante de Kaprekar atingida em", contador, "iterações")
