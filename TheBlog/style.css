@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
+}
+
+/* Layout Geral */
+#cabecalho {
+    background-color: #f7b600;
+    padding: 15px;
+    text-align: center;
+}
+
+#logo h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    padding: 10px 0;
+}
+
+#logo span {
+    color: #ffffff;
+}
+
+/* Menu de Navegação */
+#menu {
+    padding: 10px;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 2px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#menu a:hover,
+#menu a.ativo {
+    background-color: #ffffff;
+    color: #f7b600;
+}
+
+/* Estrutura Central Principal */
+#area-principal {
+    width: 920px;
+    margin: 0 auto;
+    padding: 15px 0;
+    overflow: hidden; /* evita que o float "vaze" para o rodapé */
+}
+
+#area-postagens {
+    width: 660px;
+    float: left;
+}
+
+#area-lateral {
+    width: 240px;
+    float: right;
+}
+
+/* Página de postagem única (sem barra lateral), como a imagem "Título da postagem 2" */
+#area-principal.pagina-unica #area-postagens {
+    width: 100%;
+    float: none;
+}
+
+/* Estilo das Postagens */
+.postagem {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.postagem h2 {
+    color: #f7b600;
+}
+
+.data-postagem {
+    font-size: 0.8em;
+    color: #777777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.postagem img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.postagem p {
+    font-size: 0.9em;
+    color: #4e4e4e;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+.postagem a.Leia-mais {
+    color: #f7b600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Estilo da Barra Lateral */
+.conteudo-lateral {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.conteudo-lateral h3 {
+    background-color: #d1d1d1;
+    color: #4e4e4e;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.texto-lateral {
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+.texto-lateral p {
+    color: #4e4e4e;
+    margin-bottom: 5px;
+}
+
+.texto-lateral a, .links-categorias a {
+    color: #f7b600;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.links-categorias {
+    padding: 10px 0;
+    line-height: 1.8em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+}
+
+/* Rodapé */
+footer {
+    background-color: #d9d9d9;
+    text-align: center;
+    padding: 12px;
+    color: #4e4e4e;
+    font-size: 0.85em;
+}
