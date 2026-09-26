@@ -1,0 +1,23 @@
+# TecBlog
+
+Site fictício de tecnologia feito com **HTML** e **CSS puro**, sem frameworks, como exercício de estruturação de páginas e estilização.
+
+## O que o projeto faz
+
+Reproduz um layout de referência com **cabeçalho**, **menu de navegação**, **postagens em destaque**, **barra lateral** e **rodapé**. Cada link do menu e cada "Leia mais" leva a uma **página real** (não mais links vazios `#`), deixando o site totalmente navegável.
+
+
+## Estrutura
+
+```
+tecblog/
+├── index.html
+├── jogos.html / celulares.html / informatica.html / eletronicos.html
+├── postagem1.html / postagem2.html
+├── style.css
+└── imagens/
+```
+
+## Como usar
+
+Basta abrir `index.html` no navegador 
