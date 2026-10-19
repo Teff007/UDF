@@ -1,0 +1,48 @@
+# 📚 Sistema Acadêmico - Banco de Dados Relacional (`bd_academico`)
+
+Este repositório contém o script SQL completo para a criação, modelagem e popularização de um banco de dados relacional voltado para a **gestão acadêmica** (controle de cursos, turmas, alunos, professores, disciplinas, frequências e avaliações).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **SQL / T-SQL** (Compatível com SQL Server, MySQL e outros SGBDs relacionais com adaptações mínimas de tipos de dados).
+* **Conceitos:** Modelagem Relacional, Chaves Primárias (`PRIMARY KEY`), Chaves Estrangeiras (`FOREIGN KEY`) e Manipulação de Dados (`DDL` e `DML`).
+
+---
+
+## 📊 Estrutura do Banco de Dados (DER)
+
+O banco de dados `bd_academico` é composto por **10 tabelas** interligadas que estruturam o fluxo acadêmico de uma instituição de ensino:
+
+1. **`CURSO`**: Armazena os cursos oferecidos pela instituição (ex: Informática, Patologia).
+2. **`TURMA`**: Representa as turmas abertas vinculadas a um curso específico, contendo período, ano e número de provas.
+3. **`ALUNO`**: Cadastra as informações pessoais dos estudantes (nome, data de nascimento, sexo, filiação, etc.).
+4. **`ALUNO_TURMA`**: Tabela associativa que gerencia a matrícula dos alunos nas turmas e o status de cancelamento.
+5. **`DISCIPLINA`**: Lista as matérias ministradas (Matemática, Filosofia, Biologia, etc.).
+6. **`PROFESSOR`**: Cadastra o corpo docente da instituição.
+7. **`PROF_TURM_DISC`**: Associa quais professores lecionam quais disciplinas em determinadas turmas.
+8. **`PROVA`**: Catálogo dos tipos ou códigos de avaliações aplicadas.
+9. **`AVALIACÃO`**: Registra as notas obtidas pelos alunos em cada prova por disciplina e turma.
+10. **`FREQUENCIA`**: Controla a presença ou ausência (`S`/`N`) dos alunos nas aulas por data e disciplina.
+
+---
+
+## 🚀 Como Executar o Script
+
+1. Abra o seu SGBD de preferência (como **SQL Server Management Studio - SSMS**, **MySQL Workbench**, etc.).
+2. Crie uma nova consulta (*New Query*).
+3. Copie o código contido no arquivo `.sql` principal deste repositório e cole na janela de comandos.
+4. Execute o script completo para criar o banco (`CREATE DATABASE`), definir as tabelas com suas restrições de integridade referencial (`FOREIGN KEYS`) e popular a base com os dados iniciais de exemplo (`INSERT`).
+
+---
+
+## 🔍 Consultas de Validação (Exemplos)
+
+No final do script, encontram-se comandos `SELECT` básicos para conferir a carga de dados em cada tabela:
+
+```sql
+SELECT * FROM CURSO;
+SELECT * FROM ALUNO;
+SELECT * FROM TURMA;
+SELECT * FROM AVALIACAO;
